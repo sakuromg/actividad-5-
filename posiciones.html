@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica de posiciones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .demo-container {
+            background-color: #f0f0f0;
+            position: relative;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 150px;
+            border: 1px solid #ccc;
+        }
+        .caja-base {
+            width: 80px;
+            height: 80px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .caja-estatica {
+            position: static;
+            background-color: #e74c3c;
+        }
+        .caja-relativa {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #2ecc71;
+        }
+        .caja-absoluta {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f39c12;
+        }
+        .caja-fija {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #9b59b6;
+            z-index: 999;
+        }
+        .caja-pegajosa {
+            position: sticky;
+            top: 0;
+            background-color: #f1c40f;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header><img src="fondo.jpg"></header>
+    
+    <nav>    
+        <ul>
+            <li><a href="index.html">🏠 Página principal</a></li>
+            <li><a href="#">👤 Conoceme</a>
+                <ul>
+                    <li><a href="informacion.html">Informacion personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Segunda Parcial</a>
+                <ul>
+                    <li><a href="practica1.html">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Tercera Parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <aside class="principal">
+            <h2>Práctica de Posiciones en CSS</h2>
+            <p>Ejemplos</p>
+            
+            <h3>1. Position: static</h3>
+            <p>Es el valor por defecto. Los elementos siguen el flujo normal de la página.</p>
+            <div class="demo-container">
+                <div class="caja-base caja-estatica">Static</div>
+            </div>
+
+            <h3>2. Position: relative</h3>
+            <p>Permite mover el elemento respecto a su posición original utilizando propiedades como <code>top</code> y <code>left</code>.</p>
+            <div class="demo-container">
+                <div class="caja-base caja-relativa">Relative</div>
+            </div>
+
+            <h3>3. Position: absolute</h3>
+            <p>El elemento se saca del flujo normal y se posiciona respecto a su contenedor padre posicionado.</p>
+            <div class="demo-container">
+                <div class="caja-base caja-absoluta">Absolute</div>
+            </div>
+
+            <h3>4. Position: fixed</h3>
+            <p>El elemento se posiciona en relación con la ventana del navegador (viewport). <em>(Observa la caja morada abajo a la derecha de tu pantalla).</em></p>
+            <div class="caja-base caja-fija">Fixed</div>
+
+            <h3>5. Position: sticky</h3>
+            <p>Cambia entre relativo y fijo según el desplazamiento (scroll) dentro del contenedor.</p>
+            <div class="demo-container" style="overflow-y: auto; height: 120px;">
+                <div class="caja-base caja-pegajosa">Sticky</div>
+                <p>Desplaza hacia abajo dentro de este recuadro para ver el efecto adhesivo.</p>
+                <p>Texto de prueba...</p>
+                <p>Texto de prueba...</p>
+            </div>
+        </aside>
+        
+        <aside class="secundario">
+            <h2>Tipos de Posición</h2>
+            <p><b>Valores principales:</b></p>
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+                <li>absolute</li>
+                <li>fixed</li>
+                <li>sticky</li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <img src="logobachi.png">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programacion en Internet I</p>
+        </div>
+    </footer>
+</body>
+</html>
